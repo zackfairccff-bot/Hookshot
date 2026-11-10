@@ -389,10 +389,7 @@ const char* tx_audio_output(int v) {
     return (unsigned)v < 3 ? t[v] : t[0];
 }
 // (hookshot) the motion's deadzone: the console's three zero-drift modes, the rate under which the pad counts as still
-const char* tx_deadzone(int v) {
-    static const char* t[] = {"Low", "Standard", "High"};
-    return t[v < 0 ? 0 : v > 2 ? 2 : v];
-}
+
 const char* tx_robust(int v) {
     static const char* t[] = {"Auto", "Off", "On"};
     return (unsigned)v < 3 ? t[v] : t[0];
